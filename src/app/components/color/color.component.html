@@ -1,0 +1,29 @@
+<!-- <ul class="list-group">
+    
+  <li class="list-group-item bg-light fw-bold cursor-pointer btn-toggle collapsed"  data-bs-toggle="collapse"
+  data-bs-target="#brands-collapse"
+  aria-expanded="true">Renkler</li>
+    <div class="collapse show" id="colors-collapse">
+    
+      <li
+        *ngFor="let color of colors"
+        class="list-group-item"
+        >
+        
+        {{ color.colorName}} 
+      </li>
+    </div>
+  </ul>  -->
+
+
+
+  <ul *ngIf="dataLoaded==true" class="list-group pt-2">
+    <!--<button type="button" class="btn btn-dark" disabled>Colors</button>-->
+    <h3><span class="badge rounded-pill bg-dark container-fluid ">Renkler</span></h3>
+    <div class="pt-2 pb-2">
+      <li  class="list-group-item shadow-sm" *ngFor="let color of colors">
+        <i><b>{{color.colorName}}</b></i>
+      </li>
+    </div>
+  </ul>
+

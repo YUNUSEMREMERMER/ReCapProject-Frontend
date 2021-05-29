@@ -1,0 +1,40 @@
+ <!-- <ul class="list-group">
+    
+    <li class="list-group-item bg-light fw-bold cursor-pointer btn-toggle collapsed"
+        data-bs-toggle="collapse"
+        data-bs-target="#brands-collapse"
+        aria-expanded="true"
+        [class]="getAllBrandClass()"
+        (click)="setCurrentBrandAll()"
+        routerLink="/tum arabalar"
+        >Tüm Arabalar</li> 
+
+    
+    <li class="list-group-item bg-light fw-bold cursor-pointer btn-toggle collapsed"  data-bs-toggle="collapse"
+    data-bs-target="#brands-collapse"
+    aria-expanded="true">Markalar</li>
+      <div class="collapse show" id="brands-collapse">
+      
+        <li
+          (click)="setCurrentBrand(brand)"
+          routerLink="/car/brand/{{brand.id}}"
+          *ngFor="let brand of brands"
+          [class]="getCurrentBrandClass(brand)"
+          class="cursor-pointer outline-none shadow-none">
+          {{ brand.brandName }}
+        </li>
+      </div>
+    </ul> -->
+
+
+
+    <ul *ngIf="dataLoaded==true" class="list-group pt-2">
+      <!--<button type="button" class="btn btn-dark" disabled>Brands</button>-->
+      <h3><span class="badge rounded-pill bg-dark container-fluid ">Brands</span></h3>
+      <div class="pt-2 pb-2">
+        <li class="list-group-item shadow-sm" routerLink="/tum arabalar" ><i><b>Tüm Arabalar</b></i></li>
+        <li routerLink="/car/brand/{{brand.id}}" class="list-group-item shadow-sm" *ngFor="let brand of brands" >
+          <i><b>{{brand.brandName}}</b></i>
+        </li>
+      </div>
+    </ul>

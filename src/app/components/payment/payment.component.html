@@ -1,0 +1,102 @@
+<div class="card ">
+    <div class="card-header text-center">
+      <strong>İşlem Özeti</strong>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Başlangıç</th>
+            <th>Bitiş</th>
+            <th>Marka</th>
+            <th>Renk</th>
+            <th>Model Yılı</th>
+            <th>Günlük</th>
+            <th>Toplam</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{summary.rentDate}}</td>
+            <td>{{summary.returnDate}}</td>
+            <td>{{summary.brandName}}</td>
+            <td>{{summary.color}}</td>
+            <td>{{summary.modelYear}}</td>
+            <td>{{summary.dailyPrice}}</td>
+            <td>  <strong class="text-danger"> {{summary.total}}  </strong> </td>
+            
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="card ">
+      <div class="card-header text-center">
+        <strong>Ödeme İşlemlemi</strong>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div>
+            <!-- <span>Kart Üzerindeki Ad Soyad</span> -->
+            <label>Kart Üzerindeki Ad Soyad</label>
+            <input
+
+              type="text"
+              name="name"
+              class="form-control"
+              required="required"
+            />
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="inputbox mt-3 mr-2">
+                <!-- <span>Kart Numarası</span> -->
+                <label>Kart Numarası</label>
+                <input
+                  
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  required="required"
+                />
+                <i class="fa fa-credit-card"></i>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex flex-row">
+                <div class="inputbox mt-3 mr-2">
+                  <span>Son Kullanım Tarihi</span>
+                  <input
+                    
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    required="required"
+                  />
+                </div>
+                <div class="inputbox mt-3 mr-2">
+                  <span>Güvenlik Kodu</span>
+                  <input
+                    
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    required="required"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <button   class="btn btn-success">
+            <strong>  </strong>Ödeme Yap
+          </button>
+         
+        </div>
+      </div>
+    </div>

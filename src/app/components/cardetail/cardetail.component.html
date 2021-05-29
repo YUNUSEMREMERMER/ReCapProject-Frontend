@@ -1,0 +1,77 @@
+
+<div *ngFor="let carDetail of carDetails" class="card">
+      
+     
+<!-- [src]: sorgu -->
+          <img
+          style="width: 100%; height:auto; "
+            [src]= "carDetail.imagePath.length !== 0 
+            ? 'https://localhost:44397/'+carDetail.imagePath
+            : 'https://localhost:44397/Images/default.jpg'"
+            class="card-img-top"
+            alt=""
+          />
+
+
+          <table class="table">
+            <thead> 
+              <tr>
+                <th style="text-align: center">Car Name</th>
+                <th style="text-align: center">Color</th>
+                <th style="text-align: center">Model Year</th>
+                <th style="text-align: center">Description</th>
+                <th style="text-align: center">Daily Price</th>
+              </tr>
+            </thead>
+            <tr *ngFor="let carDetail of carDetails" >
+              
+              <td style="text-align: center">{{ carDetail.brandName }}</td>
+              <td style="text-align: center">{{ carDetail.colorName }}</td>
+              <td style="text-align: center">{{ carDetail.modelYear }}</td>
+              <td style="text-align: center">{{ carDetail.descriptions }}</td>
+              <td style="text-align: center">{{ carDetail.dailyPrice | currency }}</td>
+            </tr>
+            
+          </table>
+
+          <button  routerLink="/cars/rental/{{carDetail.carId}}" type="button" class="btn btn-primary"   style="background-color: rgb(0, 0, 0);">KİRALA</button>
+          
+          
+</div>   
+
+
+
+
+        
+
+      
+    <!-- <div class="card-body">
+        <h5 class="card-title text-center">
+          {{ carDetail.brandName }} 
+        </h5>
+        <p class="card-text text-center">{{ carDetail.descriptions }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        
+    
+        <li class="list-group-item text-center">{{ carDetail.colorName }}</li>
+        <li class="list-group-item text-center">{{ carDetail.modelYear }}</li>
+        <li class="list-group-item text-center">{{ carDetail.dailyPrice }} $</li>
+        
+      </ul>
+      <div class="card-body d-grid gap-2 col-6 mx-auto">
+        <button
+          type="button"
+          
+          routerLink="/cars/detail/{{ carDetail.id }}"
+        
+          class="btn btn-primary">Details
+        </button> 
+      </div> -->
+
+      
+
+    
+
+
+  

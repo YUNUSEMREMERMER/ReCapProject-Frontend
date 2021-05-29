@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <main class="form-signin">
+            <form [formGroup]='registerForm'>
+                <div class="form-floating mb-1">
+                    <input type="text" class="form-control" placeholder="firstname" formControlName='firstname'>
+                    <label for="floatingInput">First Name</label>
+                </div>
+                <div class="form-floating mb-1">
+                    <input type="text" class="form-control" placeholder="lastname" formControlName='lastname'>
+                    <label for="floatingInput">Last Name</label>
+                </div>
+                <div class="form-floating mb-1">
+                    <input type="email" class="form-control" placeholder="name@example.com" formControlName='email'>
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-1">
+                    <input type="password" class="form-control" placeholder="Password" formControlName='password'>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating mb-1">
+                    <input type="password" class="form-control" placeholder="Confirm Password"  formControlName='confirmPassword'>
+                    <label for="floatingPassword">Confirm Password</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" (click)='register()'>Kayıt ol</button>
+            </form>
+        </main>
+    </div>
+  
+</div>
