@@ -44,7 +44,6 @@ export class RentalComponent implements OnInit {
 
   getRentDate(){
     var today  = new Date();
-    //min="1980-01-01"
     today.setDate(today.getDate() + 1);
     return today.toISOString().slice(0,10)
   }
@@ -74,6 +73,8 @@ export class RentalComponent implements OnInit {
     
 
     this.rentalService.isRentalable(rental).subscribe(response=>{
+
+
       if(response.success && rental.rentDate && rental.returnDate)
       {
         this.toastr.info("araba kiralanmak için uygun" ," Ödeme sayfasına yönlendiriliyorsunuz");
