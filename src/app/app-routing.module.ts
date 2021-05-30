@@ -22,7 +22,8 @@ const routes: Routes = [
   {path: 'carDetail/:id',component: CardetailComponent},
   {path: 'cars/filter/:colorId/:brandId',component: CarComponent},
   {path: 'cars/rental/:carId',component: RentalComponent},
-  {path: 'payment/:rentDate/:returnDate/:brandName/:color/:modelYear/:dailyPrice/:total',component: PaymentComponent},
+  //{path: 'payment/:rentDate/:returnDate/:brandName/:color/:modelYear/:dailyPrice/:total',component: PaymentComponent},
+  {path: 'payment/:summary',component: PaymentComponent},
   {path: 'cars/add',component: CarAddComponent , canActivate:[LoginGuard]},
   {path: 'login',component: LoginComponent},
   {path: 'register',component: RegisterComponent}

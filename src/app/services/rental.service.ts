@@ -27,5 +27,11 @@ export class RentalService {
   return this.httpClient.post<ResponseModel>(newPath,rental); 
 }
 
+  addRental(rental:any){
+    let newPath:string=this.apiUrl+"rentals/add"
+    return this.httpClient.post<ResponseModel>(newPath,rental); 
+
+  }
+
 
 }
